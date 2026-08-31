@@ -1,0 +1,373 @@
+EJERCICIOS DE RUBY ANTES DE RUBY ON RAILS
+===============================================
+
+Objetivo:
+Completar estos ejercicios para consolidar los fundamentos de Ruby,
+especialmente POO, antes de continuar con Ruby on Rails.
+
+TOTAL:
+- 35 ejercicios
+- 2 proyectos pequeños
+
+Orden recomendado:
+Fundamentos -> Métodos -> Arrays/Hashes -> Bloques/Ciclos -> POO
+-> Excepciones -> Proyectos -> Ruby on Rails
+
+
+BLOQUE 1 — FUNDAMENTOS
+======================
+
+1. Calculadora básica
+Pide dos números y muestra suma, resta, multiplicación, división y residuo.
+Practica: variables, gets, to_i/to_f y operadores.
+
+2. Información personal
+Pide nombre, edad y ciudad. Muestra una frase usando interpolación.
+Practica: Strings, gets.chomp e interpolación.
+
+3. El ejercicio 3 se perdio.
+
+4. Número positivo, negativo o cero
+Pide un número y determina cuál de las tres posibilidadesddfdf es.
+
+5. Menú con case
+Crea un menú:
+1. Saludar
+2. Mostrar fecha
+3. Mostrar mensaje
+4. Salir
+Practica: case y entrada de datos.
+
+
+BLOQUE 2 — MÉTODOS
+==================
+
+6. Método saludar
+Crea saludar(nombre), que devuelva "Hola <nombre>".
+No uses puts dentro del método.
+Practica: métodos, parámetros y retorno.
+
+7. Calculadora con métodos
+Crea:
+- sumar(a, b)
+- restar(a, b)
+- multiplicar(a, b)
+- dividir(a, b)
+
+8. ¿Es mayor de edad?
+Crea mayor_de_edad?(edad), que devuelva true o false.
+
+9. Conversor de temperatura
+Crea métodos para convertir Celsius <-> Fahrenheit.
+Después crea un pequeño menú.
+
+
+BLOQUE 3 — ARRAYS
+=================
+
+10. Lista de videojuegos
+Crea un Array con 5 videojuegos y muestra:
+- primero
+- último
+- cantidad
+- elemento en una posición determinada.
+
+11. Agregar y eliminar
+Practica:
+<<, push, unshift, shift, pop y delete_at.
+
+Agrega un videojuego al final del Array utilizando <<.
+Agrega otro videojuego al final utilizando push.
+Agrega otro videojuego al principio utilizando unshift.
+Elimina el primer videojuego utilizando shift.
+Elimina el último videojuego utilizando pop.
+Elimina un videojuego que se encuentre en una posición específica utilizando delete_at.
+Después de cada operación, muestra el Array para comprobar cómo fue cambiando.
+
+
+12. Recorrer un Array
+Dado un Array de números, muestra cada elemento utilizando each.
+
+13. each_with_index y each_index
+Muestra los productos junto con su índice.
+Ejemplo:
+0 - Mouse
+1 - Teclado
+2 - Monitor
+3 - Audífonos
+
+14. Estadísticas de números
+Dado un Array de números, calcula:
+- suma
+- promedio
+- mayor
+- menor
+Intenta hacerlo primero con ciclos y métodos básicos.
+
+15. Manipulación de Array
+Dado [1,2,3,4,5,6], practica:
+- drop
+- slice
+- pop
+- clear
+
+
+BLOQUE 4 — HASHES Y SYMBOLS
+===========================
+
+16. Agenda de contactos
+Crea un Hash:
+{
+  nombre: "Camilo",
+  telefono: "3000000000",
+  ciudad: "Bogotá"
+}
+Muestra cada información.
+
+17. Modificar un Hash
+Permite modificar nombre, teléfono y ciudad, y agregar una nueva propiedad.
+
+18. Recorrer un Hash
+Dado un Hash de productos, muestra:
+producto -> precio
+utilizando each.
+
+19. Buscar información
+Crea un Hash de usuarios y permite buscar un usuario por su clave.
+Indica si existe o no.
+
+20. Combinar Hashes
+Crea dos Hashes y combínalos usando merge y después merge!.
+Comprueba qué ocurrió con el Hash original.
+
+
+BLOQUE 5 — CICLOS Y BLOQUES
+===========================
+
+21. Contador
+Utiliza times para imprimir números hasta el número indicado por el usuario.
+
+22. Juego de intentos
+El programa tiene un número secreto.
+El usuario tiene máximo 5 intentos.
+Indica si el número secreto es mayor o menor.
+Si acierta, muestra un mensaje de victoria.
+Practica: loop y break.
+
+23. Menú que se repite
+Crea:
+1. Mostrar saldo
+2. Depositar
+3. Retirar
+4. Salir
+El menú debe repetirse hasta elegir salir.
+
+24. Saltar elementos
+Dado [1,2,3,4,5,6,7,8,9,10], utiliza each y next para mostrar
+solamente los números pares.
+
+
+BLOQUE 6 — POO BÁSICA
+=====================
+
+25. Clase Persona
+Crea una clase Persona.
+Crea tres personas usando .new.
+Agrega un método presentarse.
+
+26. Persona con atributos
+Agrega:
+@nombre
+@edad
+@ciudad
+Utiliza initialize.
+Ejemplo:
+persona = Persona.new("Camilo", 25, "Bogotá")
+
+27. attr_reader y attr_accessor
+Haz que:
+- nombre solamente pueda leerse
+- edad pueda leerse y modificarse
+- ciudad pueda leerse y modificarse
+
+28. Clase CuentaBancaria
+Atributos:
+- titular
+- saldo
+Métodos:
+- depositar
+- retirar
+- mostrar_saldo
+No permitas retirar más dinero del disponible.
+
+29. Clase Producto
+Atributos:
+- nombre
+- precio
+- cantidad
+Métodos:
+- valor_total
+- aumentar_stock
+- disminuir_stock
+
+30. Clase Perro + to_s
+Atributos:
+- nombre
+- raza
+- edad
+Implementa to_s para que:
+puts perro
+produzca una descripción legible.
+
+
+BLOQUE 7 — POO INTERMEDIA
+=========================
+
+31. Herencia: Animal -> Perro / Gato
+Animal tendrá:
+- comer
+- dormir
+Cada hijo tendrá su propio hacer_sonido.
+
+32. Herencia + super
+Crea Empleado con:
+- nombre
+- salario
+Crea Gerente < Empleado y agrega:
+- departamento
+Utiliza super desde Gerente#initialize.
+
+33. Polimorfismo / Duck Typing
+Crea:
+- Perro
+- Gato
+- Vaca
+Cada uno debe tener hacer_sonido.
+Crea un método que reciba cualquier objeto y llame a hacer_sonido.
+
+
+BLOQUE 8 — EXCEPCIONES
+======================
+
+34. División segura
+Pide dos números y controla:
+- división por cero
+- entrada inválida
+Utiliza begin/rescue.
+
+35. Retiro bancario seguro
+Utiliza CuentaBancaria.
+Genera un error cuando:
+- el monto sea negativo
+- el saldo sea insuficiente
+Captura el error desde fuera de la clase.
+
+
+PROYECTO 1 — AGENDA DE CONTACTOS
+=================================
+
+Primera versión: procedural.
+
+Utiliza:
+- Array
+- Hash
+- loop
+- case
+- each
+- gets
+
+Menú:
+1. Agregar contacto
+2. Mostrar contactos
+3. Buscar contacto
+4. Eliminar contacto
+5. Salir
+
+Cada contacto puede ser:
+{
+  nombre: "Camilo",
+  telefono: "3000000000"
+}
+
+Segunda versión: POO.
+
+Crea las clases:
+- Contacto
+- Agenda
+
+Contacto se encarga de sus propios datos.
+Agenda se encarga de:
+- agregar
+- buscar
+- eliminar
+- mostrar
+
+La idea es transformar el mismo proyecto procedural en una solución
+orientada a objetos.
+
+
+PROYECTO 2 — SISTEMA DE PARQUEADERO
+====================================
+
+Crea una aplicación de consola.
+
+Clases:
+- Cliente
+- Vehiculo
+- Tarifa
+- Parqueadero
+
+Cliente:
+- nombre
+- documento
+- telefono
+
+Vehiculo:
+- placa
+- tipo
+- marca
+
+Tarifa:
+Por ejemplo:
+- carro -> $3000/hora
+- moto -> $1500/hora
+
+Parqueadero:
+1. Registrar entrada
+2. Registrar salida
+3. Mostrar vehículos
+4. Buscar vehículo
+5. Mostrar tarifa
+6. Salir
+
+Cuando un vehículo entra:
+- placa
+- tipo
+- hora de entrada
+
+Cuando sale:
+- placa
+- hora de salida
+- calcular cuánto debe pagar
+
+
+CRITERIO PARA PASAR A RAILS
+===========================
+
+No es necesario dominar absolutamente todo Ruby.
+
+La meta es poder resolver los ejercicios sin copiar tutoriales y,
+sobre todo, poder construir los dos proyectos entendiendo:
+
+Objeto
+  -> estado
+  -> métodos
+  -> objetos que colaboran
+  -> datos
+  -> CRUD
+
+Cuando puedas construir el parqueadero por tu cuenta (consultando la
+documentación cuando olvides algún método), ya tendrás una base adecuada
+para comenzar Ruby on Rails.
+
+Threads no se consideran requisito para empezar Rails.

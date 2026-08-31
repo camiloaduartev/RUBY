@@ -1,0 +1,22 @@
+# IDE / Editores
+.idea/
+.vscode/
+.zed/
+
+# Ruby
+.bundle/
+vendor/bundle/
+
+# Rails
+/log/*
+/tmp/*
+/storage/*
+/config/master.key
+/config/credentials/*.key
+
+# Environment variables
+.env
+.env.*
+
+# OS
+.DS_Store
