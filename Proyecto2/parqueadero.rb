@@ -27,17 +27,18 @@ class Parqueadero
     @parqueadero.each do |vehiculo|
       if vehiculo.placa == placa
         puts "El vehiculo se encuntra dentro del parqueadero"
-        puts "Ingrese la hora de salida"
-        hora_de_salida = gets.chomp
-        tiempo_estacionado = (Time.parse(hora_de_salida) - Time.parse(vehiculo.hora_entrada))/3600
+        hora_de_salida = Time.now
+        tiempo_estacionado = (hora_de_salida - vehiculo.hora_entrada)/3600
         clase = vehiculo.tipo
         puts "Duró #{tiempo_estacionado} horas estacionado"
         total = Tarifa.total_a_pagar(tiempo_estacionado, clase)
-        if total
+        if total == false
+          puts "Solucionar primero el tema del tipo de vehiculo"
+        else if total < 0
+          puts "El calculo de las horas es incorrecto"
+        else
           puts "El valor a pagar es de #{total}"
           @parqueadero.delete(vehiculo)
-        else
-          puts "Solucionar primero el tema del tipo de vehiculo"
         end
         encontrado = true
         break

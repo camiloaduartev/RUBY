@@ -1,5 +1,5 @@
 require './parqueadero'
-
+require 'time'
 parqueadero = Parqueadero.new
 loop do
   puts "Ingrese una opcion
@@ -23,13 +23,14 @@ loop do
     cliente = Cliente.new(nombre, documento, telefono)
     p cliente
     puts "Ahora ingrese los datos del vehiculo separados entre comas"
-    puts "placa, tipo, marca, hora_entrada"
+    puts "placa, tipo, marca"
+    hora_entrada = Time.now
     argumentos = gets.chomp.split(',').map(&:strip)
     p argumentos
-    vehiculo = Vehiculo.new(argumentos[0], argumentos[1], argumentos[2], cliente, argumentos[3])
+    vehiculo = Vehiculo.new(argumentos[0], argumentos[1], argumentos[2], cliente, hora_entrada)
     p vehiculo
     parqueadero.registrar_entrada(vehiculo)
-    
+
   when 2
     puts "Ingrese la placa"
     placa = gets.chomp
