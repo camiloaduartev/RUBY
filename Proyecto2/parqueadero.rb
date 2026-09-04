@@ -71,5 +71,5 @@ class Parqueadero
       puts "Placa incorrecta o el vehiculo no se encuentra en el parqueadero actualmente..."
     end
   end
-
 end
+
